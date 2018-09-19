@@ -1,0 +1,15 @@
+version: v1.0
+name: Deploy to QA
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "Deploy to QA"
+    task:
+      jobs:
+      - name: Deploy
+        commands:
+          - echo "done"
+

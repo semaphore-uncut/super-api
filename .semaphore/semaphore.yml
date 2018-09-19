@@ -33,5 +33,6 @@ promotions:
         branch:
           - "^stg/"
           - "^e2e/"
+          - "^release-"
   - name: Staging
     pipeline_file: staging.yml

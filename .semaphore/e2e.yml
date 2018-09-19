@@ -20,3 +20,9 @@ promotions:
       - result: passed
         branch:
           - "^stg/"
+  - name: QA env
+    pipeline_file: qa.yml
+    auto_promote_on:
+      - result: passed
+        branch:
+          - "^release-"
