@@ -6,10 +6,28 @@ agent:
     os_image: ubuntu1804
 
 blocks:
+  - name: "Create a new cluster"
+    task:
+      jobs:
+      - name: New cluster
+        commands:
+          - echo "done"
   - name: "Deploy"
     task:
       jobs:
       - name: Deploy
+        commands:
+          - echo "done"
+  - name: "Is it live?"
+    task:
+      jobs:
+      - name: Deploy
+        commands:
+          - echo "done"
+  - name: "Switch LB to new env"
+    task:
+      jobs:
+      - name: LB switch
         commands:
           - echo "done"
 
