@@ -1,0 +1,22 @@
+version: v1.0
+name: Destroy old env after delay
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "Wait for 1h"
+    task:
+      jobs:
+      - name: wait
+        commands:
+          - echo "done"
+          - sleep 10
+  - name: "Destroy"
+    task:
+      jobs:
+      - name: Destroy
+        commands:
+          - echo "done"
+

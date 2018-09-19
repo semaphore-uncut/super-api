@@ -1,0 +1,15 @@
+version: v1.0
+name: Rollback
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "Switch back LB"
+    task:
+      jobs:
+      - name: LB
+        commands:
+          - echo "done"
+
