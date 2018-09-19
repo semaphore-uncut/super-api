@@ -1,0 +1,22 @@
+version: v1.0
+name: E2e tests
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "e2e"
+    task:
+      jobs:
+      - name: tests
+        commands:
+          - echo "done"
+
+promotions:
+  - name: Staging
+    pipeline_file: staging.yml
+    auto_promote_on:
+      - result: passed
+        branch:
+          - "^stg/"

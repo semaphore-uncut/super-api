@@ -17,7 +17,7 @@ blocks:
           - echo "Docker build..."
           - echo "done"
 
-  - name: "Tests"
+  - name: "Unit Tests"
     task:
       jobs:
       - name: Test
@@ -26,9 +26,12 @@ blocks:
           - echo "make smoke"
 
 promotions:
-  - name: Staging
-    pipeline_file: staging.yml
+  - name: E2e tests
+    pipeline_file: e2e.yml
     auto_promote_on:
       - result: passed
         branch:
           - "^stg/"
+          - "^e2e/"
+  - name: Staging
+    pipeline_file: staging.yml
