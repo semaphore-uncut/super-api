@@ -24,3 +24,7 @@ blocks:
         commands:
           - checkout
           - echo "make smoke"
+
+promotions:
+  - name: Staging
+    pipeline_file: staging.yml
