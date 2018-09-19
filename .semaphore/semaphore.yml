@@ -30,3 +30,5 @@ promotions:
     pipeline_file: staging.yml
     auto_promote_on:
       - result: passed
+        branch:
+          - "^stg/"
