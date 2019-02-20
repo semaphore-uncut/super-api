@@ -1,5 +1,5 @@
 version: v1.0
-name: Build & Test
+name: Build & Test 2
 agent:
   machine:
     type: e1-standard-2
